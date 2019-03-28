@@ -11,7 +11,6 @@ board_games %>%
   mutate(average = mean(average_rating)) %>%
   ggplot(aes(x = year_published)) +
   geom_point(aes(y = average_rating), alpha = .05) + 
-  #geom_line(aes(y = average, colour = "red")) +
   geom_smooth(aes(y = average, colour = "blue"), se = FALSE) +
   guides(colour = FALSE) +
   labs(y = "Average mean rating", x = "") +
